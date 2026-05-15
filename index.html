@@ -1,51 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByB Training</title>
+    <title>ByB Training - Carrera 3 Quebrachos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-     <nav>
-        <div class="Logo"></div>
-        <ul class="heroNav">
-
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-     </ul>
-    </nav>
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero.div">
-            <h1 class="Titulo"><span></span></h1>
-            <p class="hero.sub"></p>
-            <ul class="hero.lista">
-                <li></li>
-                <li></li>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">🏅 ByB Training</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#hero" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="#video" class="nav-link">Video</a></li>
+                <li class="nav-item"><a href="#inf-carrera" class="nav-link">Información</a></li>
+                <li class="nav-item"><a href="#fotos-galeria" class="nav-link">Fotos</a></li>
+                <li class="nav-item"><a href="#votacion" class="nav-link">Votación</a></li>
+                <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
-            <span>4</span><span>3</span>2<span>1</span>
+        </div>
+    </nav>
 
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">CARRERA <span>3 QUEBRACHOS</span></h1>
+            <p class="hero-subtitle">del 12 al 14 de junio de 2026 | La Rioja Capital</p>
+            <div class="hero-buttons">
+                <a href="#votacion" class="btn btn-primary">QUIERO PARTICIPAR</a>
+                <a href="#inf-carrera" class="btn btn-secondary">VER INFORMACIÓN</a>
+            </div>
+            <div class="hero-distances">
+                <h3>DISTANCIAS DISPONIBLES</h3>
+                <div class="distances-list">
+                    <div class="distance-item">85-100km</div>
+                    <div class="distance-item">70km</div>
+                    <div class="distance-item">50km</div>
+                    <div class="distance-item">25km</div>
+                    <div class="distance-item">10km</div>
+                </div>
+            </div>
         </div>
     </section>
+
     <!-- VIDEO -->
-    <section class="video">
-        <div>
-            <div class="video.header"> titulo <span>video</span></div>
-            <a href="video"  >video</a>
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2>CONOCE LA CARRERA</h2>
+            <p>Mira el video de la edición anterior</p>
+            <div class="video-container">
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+            </div>
         </div>
     </section>
-   <!-- INFORMACION -->
-    <section class="inf.carrera">
-        <div class="header"></div>
-        <div class="fecha"></div>
-        <div class="distancia"></div>
-        <div class="kit-corredor"></div>
-        <div class="pagos"></div>
+
+    <!-- INFORMACIÓN -->
+    <section id="inf-carrera" class="info-section">
+        <div class="container">
+            <h2>INFORMACIÓN DE LA CARRERA</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📅 Fechas</h3>
+                    <p>12 - 14 de junio de 2026</p>
+                </div>
+                <div class="info-card">
+                    <h3>📍 Ubicación</h3>
+                    <p>La Rioja Capital, Argentina</p>
+                </div>
+                <div class="info-card">
+                    <h3>🎯 Distancias</h3>
+                    <p>Desde 10km hasta 100km</p>
+                </div>
+                <div class="info-card">
+                    <h3>🏆 Categorías</h3>
+                    <p>Todas las edades bienvenidas</p>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- GALERÍA DE FOTOS CON CARRUSEL INFINITO -->
+    <section id="fotos-galeria" class="gallery-section">
+        <div class="container">
+            <h2>GALERÍA DE FOTOS</h2>
+            <p class="gallery-subtitle">Pasa el mouse sobre las fotos para seleccionar</p>
+            
+            <div class="carousel-wrapper">
+                <div class="carousel" id="carousel">
+                    <!-- Las fotos se cargan dinámicamente desde la BD -->
+                    <div class="carousel-item" data-id="1">
+                        <img src="https://via.placeholder.com/300x300?text=Foto+1" alt="Foto carrera">
+                        <div class="photo-overlay">
+                            <p>Foto 1</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-id="2">
+                        <img src="https://via.placeholder.com/300x300?text=Foto+2" alt="Foto carrera">
+                        <div class="photo-overlay">
+                            <p>Foto 2</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-id="3">
+                        <img src="https://via.placeholder.com/300x300?text=Foto+3" alt="Foto carrera">
+                        <div class="photo-overlay">
+                            <p>Foto 3</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-id="4">
+                        <img src="https://via.placeholder.com/300x300?text=Foto+4" alt="Foto carrera">
+                        <div class="photo-overlay">
+                            <p>Foto 4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VOTACIÓN -->
+    <section id="votacion" class="voting-section">
+        <div class="container">
+            <h2>¿VAS A CORRER CON NOSOTROS?</h2>
+            <p>Déjanos saber si participarás en la Carrera 3 Quebrachos</p>
+            
+            <div class="voting-stats">
+                <div class="stat" id="stat-si">
+                    <span class="percentage">0%</span>
+                    <p>SI, VOY</p>
+                </div>
+                <div class="stat" id="stat-no">
+                    <span class="percentage">0%</span>
+                    <p>LA PRÓXIMA</p>
+                </div>
+            </div>
+
+            <div class="voting-form">
+                <input type="text" id="voteName" placeholder="Tu nombre completo" required>
+                <input type="email" id="voteEmail" placeholder="Tu correo electrónico" required>
+                <div class="voting-buttons">
+                    <button class="btn btn-yes" id="btnYes">✓ SI, VOY</button>
+                    <button class="btn btn-no" id="btnNo">✗ LA PRÓXIMA</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section id="ubicacion" class="location-section">
+        <div class="container">
+            <h2>UBICACIÓN Y RECORRIDO</h2>
+            <div class="location-content">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.8537041024!2d-66.80277!3d-29.41!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9425c4f4c4f4c4f5%3A0x1234567890!2sLa%20Rioja%2C%20La%20Rioja!5e0!3m2!1ses!2sar!4v1234567890" 
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="location-info">
+                    <div class="location-item">
+                        <h4>🚀 Largada</h4>
+                        <p>Plaza 25 de Mayo, La Rioja</p>
+                    </div>
+                    <div class="location-item">
+                        <h4>🏁 Meta</h4>
+                        <p>Parque Yacumán, La Rioja</p>
+                    </div>
+                    <div class="location-item">
+                        <h4>🗺️ Recorrido</h4>
+                        <p>Circuito de montaña - 3 Quebrachos</p>
+                    </div>
+                    <div class="location-item">
+                        <h4>🎒 Equipamiento</h4>
+                        <p>Ropa deportiva, hidratación, protección solar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2>CONTACTANOS</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" id="fullName" placeholder="Nombre Completo" required>
+                        <input type="email" id="email" placeholder="Correo Electrónico" required>
+                        <textarea id="message" cols="30" rows="10" placeholder="Tu mensaje" required></textarea>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>¿Tienes dudas?</h3>
+                    <div class="contact-item">
+                        <span>📱 WhatsApp:</span>
+                        <a href="https://wa.me/5493804408000">+54 9 3804408000</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📧 Email:</span>
+                        <a href="mailto:info@byb-training.com">info@byb-training.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📲 Instagram:</span>
+                        <a href="https://instagram.com" target="_blank">@byb_training</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>👍 Facebook:</span>
+                        <a href="https://facebook.com" target="_blank">ByB Training</a>
+                    </div>
+                    <p class="response-time">Te respondemos en menos de 24 horas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 ByB Training. Todos los derechos reservados.</p>
+            <ul class="footer-social">
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="api-client.js"></script>
+    <script src="carousel.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
