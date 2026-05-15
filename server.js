@@ -13,6 +13,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('.'));
 
+// Headers de seguridad
+app.use((req, res, next) => {
+  res.setHeader(
+    'Content-Security-Policy',
+    "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://pagina-carrera-maraton.onrender.com; frame-src https://www.youtube.com https://www.google.com;"
+  );
+  next();
+});
+
 // Conectar a MongoDB
 connectDB();
 
