@@ -1,12 +1,13 @@
 // API Client - Funciones para comunicar con el backend
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_URL = 'https://pagina-carrera-maraton.onrender.com';
+
 
 // ========== FOTOS ==========
 const photoAPI = {
   async getAllPhotos() {
     try {
-      const response = await fetch(`${API_BASE_URL}/photos`);
+      const response = await fetch(`${API_URL}/photos`);
       if (!response.ok) throw new Error('Error al obtener fotos');
       return await response.json();
     } catch (error) {
@@ -17,7 +18,7 @@ const photoAPI = {
 
   async getPhotoById(id) {
     try {
-      const response = await fetch(`${API_BASE_URL}/photos/${id}`);
+      const response = await fetch(`${API_URL}/photos/${id}`);
       if (!response.ok) throw new Error('Error al obtener foto');
       return await response.json();
     } catch (error) {
@@ -28,7 +29,7 @@ const photoAPI = {
 
   async createPhoto(photoData) {
     try {
-      const response = await fetch(`${API_BASE_URL}/photos`, {
+      const response = await fetch(`${API_URL}/photos`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(photoData),
@@ -46,7 +47,7 @@ const photoAPI = {
 const voteAPI = {
   async submitVote(voteData) {
     try {
-      const response = await fetch(`${API_BASE_URL}/votes`, {
+      const response = await fetch(`${API_URL}/votes`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(voteData),
@@ -61,7 +62,7 @@ const voteAPI = {
 
   async getVoteStats() {
     try {
-      const response = await fetch(`${API_BASE_URL}/votes/stats`);
+      const response = await fetch(`${API_URL}/votes/stats`);
       if (!response.ok) throw new Error('Error al obtener estadísticas');
       return await response.json();
     } catch (error) {
@@ -78,7 +79,7 @@ const voteAPI = {
 const contactAPI = {
   async sendMessage(messageData) {
     try {
-      const response = await fetch(`${API_BASE_URL}/contact`, {
+      const response = await fetch(`${API_URL}/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(messageData),
