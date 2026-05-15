@@ -1,0 +1,31 @@
+{
+  "name": "byb-training-carrera",
+  "version": "1.0.0",
+  "description": "Página web informativa para Carrera 3 Quebrachos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node sample-data.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "carrera",
+    "mongodb",
+    "express",
+    "node"
+  ],
+  "author": "ByB Training",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
+
