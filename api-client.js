@@ -1,6 +1,6 @@
 // API Client - Funciones para comunicar con el backend
 
-const API_URL = 'https://pagina-carrera-maraton.onrender.com';
+const API_URL = '';
 
 
 // ========== FOTOS ==========
