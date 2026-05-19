@@ -1,6 +1,6 @@
 // API Client - Funciones para comunicar con el backend
 
-const API_URL = '';
+const API_URL = '/api';
 
 
 // ========== FOTOS ==========
